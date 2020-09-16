@@ -7,14 +7,14 @@ struct Node
     struct Node* next; 
 }; 
   
-struct Node *reverse (struct Node *head, int k) 
+struct Node *reverse (struct Node *head, int key) 
 { 
     struct Node* current = head; 
     struct Node* next = NULL; 
     struct Node* prev = NULL; 
     int count = 0;    
       
-    while (current != NULL && count < k) 
+    while (current != NULL && count < key) 
     { 
         next  = current->next; 
         current->next = prev; 
@@ -23,7 +23,7 @@ struct Node *reverse (struct Node *head, int k)
         count++; 
     } 
     if (next !=  NULL) 
-       head->next = reverse(next, k);  
+       head->next = reverse(next, key);  
     return prev; 
 } 
 void push(struct Node** head_ref, int new_data) 
