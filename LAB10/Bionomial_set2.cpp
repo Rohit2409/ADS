@@ -204,7 +204,7 @@ int main()
 {
     int ele, n;
     list<Node *> _heap;
-    cout << "Enter the no. of elements:" << endl;
+    cout << "Enter the number of elements:" << endl;
     cin >> n;
     cout << "Enter the elements to be inserted:" << endl;
     for (int i = 0; i < n; i++)
